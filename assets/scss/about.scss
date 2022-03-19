@@ -1,10 +1,8 @@
 .about {
-
   .about-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     .my-image {
       img {
         width: 400px;
@@ -15,8 +13,8 @@
     }
 
     .my-description {
-     flex: 1;
-     margin-left: 50px;
+      flex: 1;
+      margin-left: 50px;
       .text {
         font-size: 2.5rem;
         font-weight: 600;
@@ -45,6 +43,64 @@
         &:hover {
           color: $primary-color;
           background: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .about {
+    .about-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      .my-image {
+        img {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+      }
+
+      .my-description {
+        margin-left: 0;
+        .text {
+          font-size: 2.5rem;
+          font-weight: 600;
+          margin-bottom: 10px;
+          span {
+            color: $primary-color;
+          }
+        }
+
+        p {
+          text-align: justify;
+        }
+
+        a {
+          display: block;
+          background: $primary-color;
+          color: #fff;
+          font-size: 2.5rem;
+          font-weight: 500;
+          padding: 12px 36px;
+          margin-top: 20px;
+          border: 2px solid $primary-color;
+          border-radius: 6px;
+          transition: all 0.3s ease;
+          max-width: 250px;
+          width: 100%;
+          text-align: center;
+          margin: 30px auto 0;
+
+          &:hover {
+            color: $primary-color;
+            background: none;
+          }
         }
       }
     }

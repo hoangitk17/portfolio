@@ -34,4 +34,28 @@ $(document).ready(function () {
     $('.navbar .menu').toggleClass("active");
     $('.navbar i').toggleClass("active");
   })
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    effect: "coverflow",
+    grabCursor: true,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+  });
 })

@@ -1,105 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyen Van Hoang</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="./assets/libs/fontawesome-free-5.15.4/css/all.css"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/typed.min.js"></script>
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nguyen Van Hoang</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="./assets/favicon/site.webmanifest">
-  <link rel="stylesheet" href="./assets/libs/fontawesome-free-5.15.4/css/all.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
-  <script src="./assets/js/jquery-3.6.0.min.js"></script>
-  <script src="./assets/js/typed.min.js"></script>
-</head>
-
-<body>
-  <div class="scroll-up-btn">
-    <i class="fa fa-angle-up"></i>
-  </div>
-  <header>
-    <nav class="navbar">
-      <div class="portfolio-container navbar-wrapper">
-        <div class="logo">
-          <a href="#">Portfo<span>lio.</span></a>
-        </div>
-        <div class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Contact</a></li>
-        </div>
-        <div class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section id="home" class="home">
-      <div class="portfolio-container">
-        <div class="home-content">
-          <div class="text-1">My name is</div>
-          <div class="text-2">Nguyen Van Hoang</div>
-          <div class="text-3">And I'm a <span class="typing"></span></div>
-          <a href="#">Hire me</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about section-info">
-      <div class="portfolio-container">
-        <h2 class="section-info-title" sub-title="who i am">About Me</h2>
-        <div class="section-info-content about-content">
-          <div class="my-image">
-            <img src="./assets/images/profile-1.jpeg" alt="">
+  <body>
+    <div class="scroll-up-btn">
+      <i class="fa fa-angle-up"></i>
+    </div>
+    <header>
+      <nav class="navbar">
+        <div class="portfolio-container navbar-wrapper">
+          <div class="logo">
+            <a href="#">Portfo<span>lio.</span></a>
           </div>
-          <div class="my-description">
-            <div class="text">I am Nguyen Van Hoang and I'm <span class="typing-2"></span></div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis necessitatibus ipsum officia numquam
-              quo neque nostrum tempore modi, minima, porro, impedit sit? Expedita alias obcaecati, assumenda quo dolor
-              rem itaque distinctio perspiciatis commodi corporis explicabo eaque, officia vero animi esse quas, quasi
-              voluptatum eligendi autem! Fugit doloremque nihil dignissimos tempore exercitationem minima, itaque
-              distinctio saepe sunt consequuntur numquam repellendus veritatis officiis repellat error, quod veniam
-              assumenda dolorem voluptatem officia voluptatum perspiciatis incidunt quas. Incidunt quos laboriosam,
-              necessitatibus nemo laborum, cupiditate at ratione ut accusantium ipsum, ab fugiat quo exercitationem
-              aperiam sed aspernatur repellat dicta omnis consequuntur. Dolorum sit delectus vel!</p>
-            <a href="#">Download CV</a>
+          <div class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </div>
+          <div class="menu-btn">
+            <i class="fas fa-bars"></i>
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
+    </header>
+    <main>
+      <section id="home" class="home">
+        <div class="portfolio-container">
+          <div class="home-content">
+            <div class="text-1">My name is</div>
+            <div class="text-2">Nguyen Van Hoang</div>
+            <div class="text-3">And I'm a <span class="typing"></span></div>
+            <a href="#">Hire me</a>
+          </div>
+        </div>
+      </section>
 
-    <section id="skill" class="skill section-info">
-      <div class="portfolio-container">
-        <h2 class="section-info-title" sub-title="what i know">Skills</h2>
-        <div class="section-info-content skill-content">
-          <div class="skill-item">
-            <div class="skill-title">Primary skill</div>
-            <div class="skill-images">
-              <img src="./assets/images/javascript.png" alt="">
+      <section id="about" class="about section-info">
+        <div class="portfolio-container">
+          <h2 class="section-info-title" sub-title="who i am">About Me</h2>
+          <div class="section-info-content about-content">
+            <div class="my-image">
+              <img src="./assets/images/you.jpg" alt="" />
+            </div>
+            <div class="my-description">
+              <div class="text">
+                I am Nguyen Van Hoang and I'm <span class="typing-2"></span>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Reiciendis necessitatibus ipsum officia numquam quo neque
+                nostrum tempore modi, minima, porro, impedit sit? Expedita alias
+                obcaecati, assumenda quo dolor rem itaque distinctio
+                perspiciatis commodi corporis explicabo eaque, officia vero
+                animi esse quas, quasi voluptatum eligendi autem! Fugit
+                doloremque nihil dignissimos tempore exercitationem minima,
+                itaque distinctio saepe sunt consequuntur numquam repellendus
+                veritatis officiis repellat error, quod veniam assumenda dolorem
+                voluptatem officia voluptatum perspiciatis incidunt quas.
+                Incidunt quos laboriosam, necessitatibus nemo laborum,
+                cupiditate at ratione ut accusantium ipsum, ab fugiat quo
+                exercitationem aperiam sed aspernatur repellat dicta omnis
+                consequuntur. Dolorum sit delectus vel!
+              </p>
+              <a href="#">Download CV</a>
             </div>
           </div>
-          <div class="skill-item">
-            <div class="skill-title">Also know,</div>
-            <div class="skill-images">
-              <img src="./assets/images/javascript.png" alt="">
+        </div>
+      </section>
+
+      <section id="skill" class="skill section-info">
+        <div class="portfolio-container">
+          <h2 class="section-info-title" sub-title="what i know">Skills</h2>
+          <div class="section-info-content skill-content">
+            <div class="skill-item">
+              <div class="skill-title">Primary skill</div>
+              <div class="skill-images">
+                <img src="./assets/images/html.png" alt="" />
+                <img src="./assets/images/css.png" alt="" />
+                <img src="./assets/images/javascript.png" alt="" />
+                <img src="./assets/images/react.png" alt="" />
+                <img src="./assets/images/vue-js.svg" alt="" />
+              </div>
             </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-title">Tools</div>
-            <div class="skill-images">
+            <div class="skill-item">
+              <div class="skill-title">Also know,</div>
+              <div class="skill-images">
+                <img src="./assets/images/nuxt.svg" alt="" />
+                <img src="./assets/images/sass.svg" alt="" />
+                <img src="./assets/images/redux.png" alt="" />
+                <img src="./assets/images/redux-saga.png" alt="" />
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-title">Tools</div>
+              <div class="skill-images">
+                <img src="./assets/images/vscode.png" alt="" />
+                <img src="./assets/images/figma.png" alt="" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <script src="./assets/js/home.js"></script>
-</body>
+      </section>
 
+      <section id="project" class="project section-info">
+        <div class="portfolio-container">
+          <h2 class="section-info-title" sub-title="What i did">Projects</h2>
+          <div class="section-info-content project-content">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+                <div class="swiper-slide" style="background-image:url('./assets/images/project.jpg')">
+                  <div class="project-card">
+                    Projects
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section-info">
+        <div class="portfolio-container">
+          <h2 class="section-info-title" sub-title="Get in touch">Contact</h2>
+          <div class="section-info-content contact-content"></div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/home.js"></script>
+  </body>
 </html>
