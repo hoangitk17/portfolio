@@ -102,7 +102,10 @@ img {
   max-width: 100%;
 }
 
-input, select, button, textarea {
+input,
+select,
+button,
+textarea {
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   outline: none;
@@ -119,7 +122,20 @@ a {
   width: 100%;
 }
 
+.text-primary {
+  color: crimson;
+}
+
+.text-white {
+  color: white;
+}
+
+.full-w {
+  width: 100%;
+}
+
 .section-info {
+  overflow: hidden;
   padding: 100px 0;
   min-height: 100vh;
 }
@@ -538,6 +554,136 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.contact .contact-content .contact-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contact .contact-content .contact-list .contact-item {
+  width: calc(50% - 20px);
+}
+.contact .contact-content .contact-list .contact-item .info-box {
+  color: #666;
+  padding: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.contact .contact-content .contact-list .contact-item .info-box .contact-icon {
+  font-size: 24px;
+  color: crimson;
+  border-radius: 50%;
+  padding: 14px;
+  float: left;
+  background: rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.contact .contact-content .contact-list .contact-item .info-box .primary-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1;
+  gap: 5px;
+}
+.contact .contact-content .contact-list .contact-item .info-box .primary-info .social-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.contact .contact-content .contact-list .contact-item .info-box .primary-info .social-links i {
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.contact .contact-content .contact-list .contact-item .info-box .primary-info .social-links i:hover {
+  color: crimson;
+}
+.contact .contact-content .php-email-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+}
+.contact .contact-content .php-email-form .form-group {
+  width: calc(100% - 20px);
+  margin-top: 10px;
+}
+.contact .contact-content .php-email-form .form-group .form-control {
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0;
+  transition: 0.3s;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.5;
+  appearance: none;
+  padding: 10px 15px;
+  /* Change the white to any color */
+}
+.contact .contact-content .php-email-form .form-group .form-control:-webkit-autofill, .contact .contact-content .php-email-form .form-group .form-control:-webkit-autofill:hover, .contact .contact-content .php-email-form .form-group .form-control:-webkit-autofill:focus, .contact .contact-content .php-email-form .form-group .form-control:-webkit-autofill:active {
+  border: none !important;
+  -webkit-text-fill-color: inherit !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.09) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.contact .contact-content .php-email-form .half-w {
+  width: calc(50% - 20px);
+}
+.contact .contact-content .php-email-form #sendSignal {
+  background: crimson;
+  border: 2px solid crimson;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.contact .contact-content .php-email-form #sendSignal:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .contact .contact-content .contact-list {
+    flex-direction: column;
+  }
+  .contact .contact-content .contact-list .contact-item {
+    width: 100%;
+  }
+}
+@media (max-width: 489px) {
+  .contact .contact-content .php-email-form {
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .contact .contact-content .php-email-form .form-group {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .contact .contact-content .php-email-form .half-w {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
