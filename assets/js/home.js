@@ -1,3 +1,7 @@
+(function () {
+  emailjs.init("tsyGZQz0IDnfZwF3T");
+})();
+
 $(document).ready(function () {
   $(window).scroll(function () {
     if (this.scrollY > 20) {
@@ -61,4 +65,23 @@ $(document).ready(function () {
   });
 
   AOS.init();
+
+  $("#sendSignal").click(function () {
+    const name = $("#name").val();
+    const email = $("#email").val();
+    const subject = $("#subject").val();
+    const message = $("#message").val();
+    const params = {
+      name, email, subject, message
+    }
+    const serviceId = 'service_1y78cso'
+    const templateId = 'template_5uql7xc'
+    emailjs.send(serviceId, templateId, params).then(res => {
+      console.log(res);
+      $("#name").val('')
+      $("#email").val('')
+      $("#subject").val('')
+      $("#message").val('')
+    }).catch(error => console.log(error));
+  });
 });
