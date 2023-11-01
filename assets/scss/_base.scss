@@ -139,6 +139,12 @@
   font-display: swap;
 }
 
+:root {
+  --swiper-pagination-color: crimson;
+  --swiper-pagination-bullet-inactive-color: rgb(24, 12, 14);
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;

@@ -39,6 +39,10 @@ $(document).ready(function () {
     $(".navbar .menu").toggleClass("active");
     $(".navbar i").toggleClass("active");
   });
+  $(".navbar .menu a").click(function () {
+    $(".navbar .menu").removeClass("active");
+    $(".navbar i").removeClass("active");
+  });
 
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
@@ -66,22 +70,76 @@ $(document).ready(function () {
 
   AOS.init();
 
+  function showToast({ message, duartion } = { message: "", duartion: 3000 }) {
+    Toastify({
+      text: message,
+      duration: duartion,
+      // destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background:
+          "linear-gradient(to right, rgb(150, 20, 60), rgb(220, 20, 60))",
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
+  }
+
+  function isValidEmail(email) {
+    // Regular expression to match a valid email address
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+    return emailRegex.test(email);
+  }
+
   $("#sendSignal").click(function () {
     const name = $("#name").val();
     const email = $("#email").val();
     const subject = $("#subject").val();
     const message = $("#message").val();
     const params = {
-      name, email, subject, message
+      name,
+      email,
+      subject,
+      message,
+    };
+    const serviceId = "service_1y78cso";
+    const templateId = "template_5uql7xc";
+
+    const isFillFull = Object.keys(params).every((key) => params[key]);
+    if (!isFillFull) {
+      showToast({
+        message: "Please complete all fields",
+      });
+      return;
     }
-    const serviceId = 'service_1y78cso'
-    const templateId = 'template_5uql7xc'
-    emailjs.send(serviceId, templateId, params).then(res => {
-      console.log(res);
-      $("#name").val('')
-      $("#email").val('')
-      $("#subject").val('')
-      $("#message").val('')
-    }).catch(error => console.log(error));
+    if (!isValidEmail(email)) {
+      showToast({
+        message: "Please fill valid email",
+      });
+      return;
+    }
+    emailjs
+      .send(serviceId, templateId, params)
+      .then((res) => {
+        $("#name").val("");
+        $("#email").val("");
+        $("#subject").val("");
+        $("#message").val("");
+        showToast({
+          message: "Thank you for your email!",
+          duartion: 5000,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        showToast({
+          message:
+            "Sorry, your message could not be delivered. Please try again later",
+        });
+      });
   });
 });
