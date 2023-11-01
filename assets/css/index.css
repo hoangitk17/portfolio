@@ -515,9 +515,12 @@ a {
   height: 100%;
 }
 .project .project-content .swiper .swiper-slide {
+  overflow: hidden;
   text-align: center;
   font-size: 18px;
   background: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,21 +536,38 @@ a {
   align-items: center;
   position: relative;
   background-size: cover;
+  transition: all 0.5s;
   background-position: center;
   background-repeat: no-repeat;
 }
 .project .project-content .swiper .swiper-slide .project-card {
+  border-radius: 5px;
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
+  height: 100%;
   right: 0;
+  opacity: 0;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: black;
   /* Fallback color */
   background: rgba(0, 0, 0, 0.5);
   /* Black background with 0.5 opacity */
   color: #f1f1f1;
   /* Grey text */
+  font-size: bold;
+  font-size: 20px;
+}
+.project .project-content .swiper .swiper-slide:hover {
+  background-position: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.project .project-content .swiper .swiper-slide:hover .project-card {
+  opacity: 1;
+  top: 0;
 }
 .project .project-content .swiper .swiper-slide img {
   display: block;
